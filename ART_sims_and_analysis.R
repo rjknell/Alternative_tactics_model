@@ -704,7 +704,6 @@ group.size <- c(2,4,6,8,10)
 max.offspring <- c(6)
 alpha <- c(1)
 ART_success <- c(0.5, 0.7, 0.9)
-spermcomp <- c(0.5)
 init.threshold <- c(0, 0.25, 0.5)
 type <- c("fixed", "simultaneous")
 beta <- c(2)
@@ -735,7 +734,6 @@ params <-
               max.offspring,
               alpha ,
               ART_success,
-              spermcomp,
               init.threshold,
               obligate,
               beta,
@@ -750,7 +748,6 @@ colnames(params) <-
     "max.offspring",
     "alpha" ,
     "ART_success",
-    "spermcomp",
     "init.threshold",
     "obligate",
     "beta",
@@ -777,11 +774,10 @@ system.time(
       max.offspring = params[i, 3],
       alpha = params[i, 4],
       ART_success = params[i, 5],
-      spermcomp = params[i, 6],
-      init.threshold = params[i, 7],
-      obligate = params[i, 8],
-      beta = params[i, 9],
-      directional.rate = params[i, 10]
+      threshold = params[i, 6],
+      obligate = params[i, 7],
+      beta = params[i, 8],
+      directional.rate = params[i, 9]
     )
 )
 
