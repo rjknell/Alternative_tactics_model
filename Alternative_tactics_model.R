@@ -322,7 +322,7 @@ for (i in seq(time)) {
     reproduction$offspring <-
       ifelse(reproduction$offspring < 0, 0, reproduction$offspring)
     
-    #Calculate the number of newborns
+    #Calculate the number of newborns ("newborns" are distinguished from "offspring" in that newborns refers to the offspring that are actually produced whereas offspring is the potential number of offspring.)
     reproduction$newborns <- numeric(length = nrow(reproduction))
     
     # Use a loop to make sure reproduction is working properly. So sue me.
